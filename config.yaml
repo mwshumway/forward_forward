@@ -1,0 +1,28 @@
+seed: 42
+device: 'cpu'
+
+input:
+  path: datsets
+  batch_size: 100
+
+model:
+  momentum: 0.9
+  num_layers: 3
+  hidden_dim: 128
+
+training:
+  epochs: 100
+  learning_rate: 1e-3
+  weight_decay: 3e-4
+  momentum: 0.9
+
+  downstream_learning_rate: 1e-3
+  downstream_weight_decay: 3e-4
+
+  val_idx: 10
+  final_test: True
+
+data:
+  num_classes: 10
+
+
